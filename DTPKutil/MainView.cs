@@ -18,10 +18,10 @@ namespace DTPKutil
             if (ofd.ShowDialog(this) == DialogResult.OK)
             {
                 txtInput.Text = ofd.FileName;
-                if (string.IsNullOrEmpty(txtOutput.Text))
-                {
-                    txtOutput.Text = Path.GetDirectoryName(txtInput.Text);
-                }
+                //if (string.IsNullOrEmpty(txtOutput.Text))
+                //{
+                    txtOutput.Text = Path.GetDirectoryName(txtInput.Text) + "\\" + Path.GetFileNameWithoutExtension(txtInput.Text) + "\\";
+                //}
             }
         }
 
@@ -52,6 +52,10 @@ namespace DTPKutil
 
         private void btnExtract_Click(object sender, EventArgs e)
         {
+	    if (!Directory.Exists(txtOutput.Text)){
+		Directory.CreateDirectory(txtOutput.Text);
+	    }
+
             if (!string.IsNullOrEmpty(txtInput.Text) && !string.IsNullOrEmpty(txtOutput.Text))
             {
                 var track = LoadTrack();

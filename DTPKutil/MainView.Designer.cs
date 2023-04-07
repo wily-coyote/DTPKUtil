@@ -53,7 +53,7 @@
             this.txtInput.Location = new System.Drawing.Point(158, 23);
             this.txtInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtInput.Name = "txtInput";
-            this.txtInput.ReadOnly = true;
+            this.txtInput.ReadOnly = false;
             this.txtInput.Size = new System.Drawing.Size(780, 31);
             this.txtInput.TabIndex = 1;
             // 
@@ -108,7 +108,7 @@
             this.txtOutput.Location = new System.Drawing.Point(224, 29);
             this.txtOutput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtOutput.Name = "txtOutput";
-            this.txtOutput.ReadOnly = true;
+            this.txtOutput.ReadOnly = false;
             this.txtOutput.Size = new System.Drawing.Size(682, 31);
             this.txtOutput.TabIndex = 1;
             // 
